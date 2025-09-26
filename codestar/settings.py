@@ -27,6 +27,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
+# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['.herokuapp.com',
@@ -48,7 +49,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_summernote',
     'blog',
-    'about',
+    'about'
 ]
 
 SITE_ID = 1
@@ -126,6 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

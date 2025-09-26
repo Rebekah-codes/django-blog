@@ -1,8 +1,6 @@
-
 from . import views
-from django.urls import path, include
+from django.urls import path
 
 urlpatterns = [
     path('', views.about_me, name='about'),
-    path("accounts/", include("allauth.urls")),
 ]

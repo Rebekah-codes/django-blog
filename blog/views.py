@@ -4,9 +4,10 @@ from .models import Post
 
 # Create your views here.
 class PostList(generic.ListView):
-	queryset = Post.objects.filter(status=1)
-	template_name = "blog/index.html"
-	paginate_by = 6
+    queryset = Post.objects.filter(status=1)
+    template_name = "blog/index.html"
+    paginate_by = 6
+
 
 def post_detail(request, slug):
     """
@@ -28,5 +29,5 @@ def post_detail(request, slug):
     return render(
         request,
         "blog/post_detail.html",
-        {"post": post, "coder": "Rebekah"},
+        {"post": post},
     )
