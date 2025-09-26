@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure--p=xiz)bpcav%b6n)1chotxp0f*uulx*$rwy2qny9dwx21fwno")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.herokuapp.com',
                  '127.0.0.1',
@@ -38,6 +38,7 @@ ALLOWED_HOSTS = ['.herokuapp.com',
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'django_summernote',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
